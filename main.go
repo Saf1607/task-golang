@@ -2,22 +2,12 @@ package main
 
 import (
 	"fmt"
-	"os"
-	"strconv"
 	"task-golang/utils" // Import the utils package
 )
 
 func main() {
-	// Read n from command line arguments
-	n := 1 // default value
-	if len(os.Args) > 1 {
-		var err error
-		n, err = strconv.Atoi(os.Args[1]) // convert string to int
-		if err != nil {
-			fmt.Println("Invalid number. Using default n=1")
-			n = 1
-		}
-	}
+
+	n := 1
 
 	fmt.Println(utils.MagicSum(16))
 	fmt.Println(utils.MagicPow(3))
